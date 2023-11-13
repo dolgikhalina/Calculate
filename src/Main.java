@@ -22,7 +22,7 @@ public class Main {
     }
 
     public static void checkLenght(String[] data) throws IOException {
-        if (data.length > 3) {
+        if (data.length != 3) {
             throw new IOException("Введите выражение с двумя операндами");
         }
     }
