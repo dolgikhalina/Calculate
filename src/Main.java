@@ -22,7 +22,7 @@ public class Main {
     }
 
     public static void checkLenght(String[] data) throws IOException {
-        if (data.length > 3) {
+        if (data.length != 3 ) {
             throw new IOException("Введите выражение с двумя операндами");
         }
     }
@@ -37,11 +37,11 @@ public class Main {
         int a;
         try {
             a = Integer.parseInt(number);
-            if (a < 0 || a > 10) {
-                throw new IOException("Введите число от 0 до 10");
-            }
         } catch (Exception e) {
             throw new Exception("Введите целое число");
+        }
+        if (a <= 0 || a > 10) {
+            throw new IOException("Введите число от 1 до 10");
         }
         return a;
     }
